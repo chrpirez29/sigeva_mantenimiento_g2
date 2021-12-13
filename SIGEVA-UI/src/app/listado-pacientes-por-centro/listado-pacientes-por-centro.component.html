@@ -1,0 +1,15 @@
+<app-barra-navegacion></app-barra-navegacion>
+
+<div class="seccion contenedor">
+	<div class="separation"></div>
+	<h1 class="centrar-texto page-name">USUARIOS DEL SISTEMA</h1>
+	<app-mensaje-configuracion></app-mensaje-configuracion>
+
+	{{cargarUsuarios()}}
+	<div class="separation"></div>
+
+	<div class="contenedor-items">
+		<app-usuariocentro *ngFor="let usuario of usuarios" [usuario]=usuario
+			[existeConfiguracion]=existeConfiguracion></app-usuariocentro>
+	</div>
+</div>

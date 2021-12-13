@@ -41,8 +41,12 @@
                 class="btn-nav">Mis Citas
         </button>
 
-        <button mat-button *ngIf="isLogged && (rol === 'Sanitario' || rol === 'SuperAdmin')"
-                routerLink="/listarPacientes" class="btn-nav">Vacunar pacientes
+        <button mat-button *ngIf="isLogged && (rol === 'Sanitario' || rol === 'SuperAdmin')" routerLink="/listarPacientes" 
+        		class="btn-nav">Vacunar pacientes
+        </button>
+        
+        <button mat-button *ngIf="isLogged && (rol === 'PersonalDeCitas' || rol === 'SuperAdmin')" routerLink="/listarPacientesPorCentro"
+                class="btn-nav">Mis Pacientes
         </button>
 
         <button mat-button *ngIf="isLogged" (click)="openDialogCerrarSesion()" class="btn-nav" style="color: red">

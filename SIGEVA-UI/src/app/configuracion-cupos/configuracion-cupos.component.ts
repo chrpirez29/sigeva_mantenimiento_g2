@@ -28,6 +28,7 @@ export class ConfiguracionCuposComponent implements OnInit {
   erroresMinutos: boolean;
 
 
+
   constructor(private json: JsonService) {
     this.duracionMinutos = 0;
     this.numeroPacientes = 0;
@@ -45,6 +46,7 @@ export class ConfiguracionCuposComponent implements OnInit {
     this.mensajeControlDuracion = '';
     this.erroresHoras = false;
     this.erroresMinutos = false;
+
   }
 
   ngOnInit(): void {
@@ -78,9 +80,6 @@ export class ConfiguracionCuposComponent implements OnInit {
 
 
   calcularHoraFin() {
-    this.duracionJornadaMinutos = Number(this.duracionJornada.split(":")[1]);
-    this.duracionJornadaHoras = Number(this.duracionJornada.split(":")[0])
-
     if (this.duracionJornadaHoras <= 23 && this.duracionJornadaMinutos <= 59) {
       this.mensajeControlDuracion = '';
       if (this.fechaInicio != '') {
@@ -91,14 +90,14 @@ export class ConfiguracionCuposComponent implements OnInit {
       }
     } else {
       if (this.duracionJornadaHoras > 23) {
-        this.erroresHoras = true;
+        this.erroresHoras = true;	
       }
       if (this.duracionJornadaMinutos > 59) {
         this.erroresMinutos = true;
       }
       this.mensajeControlDuracion = '';
       this.mensajeControlDuracion = '¡Valores incorrectos!';
-    }
+    };
   }
 
   crearConfiguracionCupos() {

@@ -1,0 +1,183 @@
+@import url(https://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.contenedor-dividido {
+  width: 90%;
+  height: 100%;
+  display: inline-block;
+}
+
+.listado-form {
+  background-color: #3498DB;
+  float: left;
+  width: 83%;
+  height: auto;
+
+}
+
+.vacunas {
+  background-color: #3498DB;
+  float: right;
+  width: 17%;
+  height: 300px;
+}
+
+.listado {
+  background-color: #3498DB;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  width: 90%;
+  height: 625px;
+  margin: 2px auto;
+  padding: 20px;
+}
+
+.contenedor-paciente {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+
+.btn-vacunar {
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 200px;
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+
+  cursor: pointer;
+
+}
+
+.campo-pacientes {
+  position: relative;
+  top: 15px;
+  margin: 0 auto;
+}
+
+.icono {
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+}
+
+.separation {
+  height: 20px;
+  width: 100%;
+  background-color: #3498DB;
+}
+
+p {
+  margin: 0 auto;
+}
+
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 25px;
+}
+
+.stick {
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 200px;
+  border: 2px solid transparent;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 auto;
+
+  position: relative;
+  top: 20px;
+  background-color: darkseagreen;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.date-button {
+  background-color: rgb(43, 89, 40);
+  top: 0px;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.mensaje-guia {
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.tabla-imagenes {
+  margin: 0px auto;
+}
+
+.extra {
+  position: relative;
+  top: 35px;
+  margin: 0 auto;
+}
+
+.vacuna-form {
+  position: relative;
+  top: 20px;
+}
+
+.header {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  background-color: #3498DB;
+}
+
+.date-picker {
+  background-color: darkseagreen;
+  width: 300px;
+  margin: 0px auto;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}

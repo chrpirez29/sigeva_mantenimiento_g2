@@ -35,7 +35,7 @@
       <button class="btn-cancel" *ngIf="!editMode" (click)=openDialogEliminar()>ELIMINAR</button>
       <button class="btn" (click)="editarCita()" *ngIf="!editMode">EDITAR</button>
       <button class="btn-cancel" *ngIf="editMode" (click)=openDialogCancelar()>CANCELAR</button>
-      <button class="btn" (click)="editarCita()" *ngIf="editMode" (click)=openDialogGuardar()>GUARDAR</button>
+      <button class="btn" *ngIf="editMode" (click)=openDialogGuardar()>GUARDAR</button>
     </div>
 
     <p class="resaltadoNegativo" *ngIf="errorMessage">{{errorMessage}}</p>

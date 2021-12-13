@@ -25,6 +25,7 @@ public class CrearRolesYVacunasTest {
 	static RolDTO rolDTOAdministrador;
 	static RolDTO rolDTOPaciente;
 	static RolDTO rolDTOSanitario;
+	static RolDTO rolDTOPersonal;
 
 	@BeforeAll
 	public static void crearVacuna() {
@@ -39,6 +40,7 @@ public class CrearRolesYVacunasTest {
 		rolDTOAdministrador = new RolDTO();
 		rolDTOPaciente = new RolDTO();
 		rolDTOSanitario = new RolDTO();
+		rolDTOPersonal= new RolDTO();
 	}
 
 	@Test
@@ -62,14 +64,18 @@ public class CrearRolesYVacunasTest {
 		rolDTOAdministrador.setNombre("Administrador");
 		rolDTOPaciente.setNombre("Paciente");
 		rolDTOSanitario.setNombre("Sanitario");
+		rolDTOPersonal.setNombre("Personal");
+		
 
 		utilidades.crearRol(rolDTOAdministrador);
 		utilidades.crearRol(rolDTOPaciente);
 		utilidades.crearRol(rolDTOSanitario);
+		utilidades.crearRol(rolDTOPersonal);
 
 		utilidades.eliminarRol(rolDTOAdministrador.getId());
 		utilidades.eliminarRol(rolDTOPaciente.getId());
 		utilidades.eliminarRol(rolDTOSanitario.getId());
+		utilidades.eliminarRol(rolDTOPersonal.getId());
 
 		assertTrue(true);
 	}

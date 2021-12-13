@@ -23,7 +23,7 @@
         <div class="control-group">
           <strong>Nombre de Usuario:</strong>
           <input type="email" placeholder="Nombre de usuario" name="username" #username="ngModel"
-                 [(ngModel)]="usuario.username" required>
+                 [(ngModel)]="usuario.username" required disabled>
           <div>
             <small *ngIf="!username.valid && username.touched" class="textoColorRojo">
               El campo no puede estar vacío

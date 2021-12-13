@@ -21,6 +21,7 @@ import com.equipo3.SIGEVA.model.Cita;
 import com.equipo3.SIGEVA.model.ConfiguracionCupos;
 import com.equipo3.SIGEVA.model.Cupo;
 import com.equipo3.SIGEVA.model.Paciente;
+import com.equipo3.SIGEVA.model.PersonalDeCitas;
 import com.equipo3.SIGEVA.model.Rol;
 import com.equipo3.SIGEVA.model.Sanitario;
 import com.equipo3.SIGEVA.model.Usuario;
@@ -270,6 +271,26 @@ public class WrapperModelToDTO {
 						Integer.parseInt((encrypter.desencriptar(paciente.getNumDosisAplicadas()))));
 
 				return pacienteDTO;
+				
+			case "PersonalDeCitas":
+
+				PersonalDeCitas personal = (PersonalDeCitas) usuario;
+
+				PersonalDeCitasDTO personalDTO = new PersonalDeCitasDTO();
+
+				personalDTO.setIdUsuario(personal.getIdUsuario());
+				personalDTO.setRol(getRolDTOfromUuid(personal.getRol()));
+				personalDTO.setCentroSalud(getCentroSaludDTOfromUuid(personal.getCentroSalud()));
+				personalDTO.setUsername(personal.getUsername());
+				personalDTO.setCorreo(personal.getCorreo());
+				personalDTO.setHashPassword(personal.getHashPassword());
+				personalDTO.setDni(personal.getDni());
+				personalDTO.setNombre(personal.getNombre());
+				personalDTO.setApellidos(personal.getApellidos());
+				personalDTO.setFechaNacimiento(personal.getFechaNacimiento());
+				personalDTO.setImagen(personal.getImagen());
+
+				return personalDTO;
 
 			default:
 				break;

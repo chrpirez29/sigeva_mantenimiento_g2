@@ -13,11 +13,11 @@ import { HttpParams } from "@angular/common/http";
 import { TokenService } from "../Service/token.service";
 
 @Component({
-	selector: 'app-cita-editar',
-	templateUrl: './cita-editar.component.html',
-	styleUrls: ['./cita-editar.component.css']
+	selector: 'app-cita-editarPersonal',
+	templateUrl: './cita-editarPersonal.component.html',
+	styleUrls: ['./cita-editarPersonal.component.css']
 })
-export class CitaEditarComponent {
+export class CitaEditarPersonalComponent {
 
 	@Input() cita: CitaConObjetos;
 	fechaCita: string = "";
@@ -47,23 +47,28 @@ export class CitaEditarComponent {
 	addEvent(event: MatDatepickerInputEvent<Date>) {
 		this.daySelected = true;
 
-		let params = new HttpParams({
-			fromObject: {
-				uuidPaciente: String(this.token.getIdUsuario()),
-				fecha: JSON.stringify(event.value)
-			}
-		});
-		this.json.getJsonPJ("cupo/buscarCuposLibresFecha", params).subscribe(
-			result => {
-				this.rangosHoras = JSON.parse(JSON.stringify(result));
-				this.rangosHoras.forEach(function(rango) {
-					rango.fechaYHoraInicio = new Date(rango.fechaYHoraInicio);
+		this.json.getJson('/tokenUsuario/getId').subscribe(
+			id => {
+				let params = new HttpParams({
+					fromObject: {
+						uuidPaciente: String(id),
+						fecha: JSON.stringify(event.value)
+					}
 				});
-			}
-			
-		);
-	}
+				this.json.getJsonPJ("cupo/buscarCuposLibresFecha", params).subscribe(
+					result => {
+						this.rangosHoras = JSON.parse(JSON.stringify(result));
+						this.rangosHoras.forEach(function(rango) {
+							rango.fechaYHoraInicio = new Date(rango.fechaYHoraInicio);
+						});
+					}
 
+				);
+			}
+		);
+
+
+	}
 	openDialogGuardar() {
 		let self = this;
 		const dialogRef = this.dialog.open(VentanaEmergenteComponent, {
@@ -78,7 +83,7 @@ export class CitaEditarComponent {
 					}
 				});
 				this.json.getJsonPJ("cita/modificarCita", params).subscribe(
-					_res=> {
+					_res => {
 						self.editMode = false;
 						this.message = "Cita editada correctamente";
 						setTimeout(function() {
@@ -87,11 +92,11 @@ export class CitaEditarComponent {
 
 						this.errorMessage = "";
 					}, error => {
-							this.errorMessage = error.error.message;
-							this.message="";
+						this.errorMessage = error.error.message;
+						this.message = "";
 					}
 				)
-			
+
 			}
 		});
 	}
@@ -112,8 +117,8 @@ export class CitaEditarComponent {
 				this.minDate = result[0];
 				this.maxDate = result[1];
 			}, error => {
-					this.errorMessage = error.error.message;
-					this.message="";
+				this.errorMessage = error.error.message;
+				this.message = "";
 			}
 		)
 	}

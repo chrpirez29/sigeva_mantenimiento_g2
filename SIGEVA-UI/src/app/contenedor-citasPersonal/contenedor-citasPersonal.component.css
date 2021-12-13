@@ -1,0 +1,12 @@
+.contenedor-citas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 25px;
+  background: #bbe1fa;
+  border-radius: 5px;
+  padding: 10px;
+}

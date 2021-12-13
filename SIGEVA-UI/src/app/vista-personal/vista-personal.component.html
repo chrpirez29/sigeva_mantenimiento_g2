@@ -1,0 +1,24 @@
+<app-barra-navegacion></app-barra-navegacion>
+
+<div class="seccion contenedor">
+  <div class="contenedor-citas">
+
+    <div class="separation"></div>
+    <div class="solicitud-cita">
+      <div class="register-form">
+        <h1>{{this.mensaje}}</h1>
+        <div class="control-group">
+          <button class="btn" (click)=getId() id="msgerror" [disabled]="solicitada">Solicitar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <app-cita-pedir *ngFor="let cita of citas" [cita]=cita></app-cita-pedir>
+
+  <h2 class="resaltadoNegativo" *ngIf="mensajeError != ''">{{this.mensajeError}}</h2>
+
+</div>
+
+

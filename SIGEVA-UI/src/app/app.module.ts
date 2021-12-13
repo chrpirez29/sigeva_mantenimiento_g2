@@ -15,6 +15,7 @@ import {CrearUsuariosComponent} from './crear-usuarios/crear-usuarios.component'
 import {IndicarDosisVacunasComponent} from './indicar-dosis-vacunas/indicar-dosis-vacunas.component';
 import {UsuariosSistemaComponent} from './usuarios-sistema/usuarios-sistema.component';
 import {UsuarioComponent} from './usuario/usuario.component';
+import {UsuarioCentroComponent} from './usuario-centro/usuario-centro.component';
 import {SolicitarCitaComponent} from './solicitar-cita/solicitar-cita.component';
 import {CentroSaludComponent} from './centro-salud/centro-salud.component';
 import {CentrosSaludSistemaComponent} from './centros-salud-sistema/centros-salud-sistema.component';
@@ -24,6 +25,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
 import {ListadoPacientesComponent} from './listado-pacientes/listado-pacientes.component';
+import {ListadoPacientesPorCentroComponent} from './listado-pacientes-por-centro/listado-pacientes-por-centro.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule, MatOptionModule} from "@angular/material/core";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -33,12 +35,16 @@ import {BarraNavegacionComponent} from './barra-navegacion/barra-navegacion.comp
 import {MatInputModule} from "@angular/material/input";
 import {MatMenuModule} from "@angular/material/menu";
 import {ContenedorCitasComponent} from './contenedor-citas/contenedor-citas.component';
+import {ContenedorCitasPersonalComponent} from './contenedor-citasPersonal/contenedor-citasPersonal.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {CitaEditarComponent} from './cita-editar/cita-editar.component';
+import {CitaEditarPersonalComponent} from './cita-editarPersonal/cita-editarPersonal.component';
 import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import {MensajeConfiguracionComponent} from './mensaje-configuracion/mensaje-configuracion.component';
 import { CitaPedirComponent } from './cita-pedir/cita-pedir.component';
+import {VistaPersonalComponent} from './vista-personal/vista-personal.component';
+
 
 
 @NgModule({
@@ -51,11 +57,13 @@ import { CitaPedirComponent } from './cita-pedir/cita-pedir.component';
     IndicarDosisVacunasComponent,
     UsuariosSistemaComponent,
     UsuarioComponent,
+	UsuarioCentroComponent,
     SolicitarCitaComponent,
     CentroSaludComponent,
     CentrosSaludSistemaComponent,
     EditarUsuarioComponent,
     ListadoPacientesComponent,
+	ListadoPacientesPorCentroComponent,
     EditarUsuarioComponent,
     VentanaEmergenteComponent,
     ModificacionCentroSaludComponent,
@@ -65,6 +73,9 @@ import { CitaPedirComponent } from './cita-pedir/cita-pedir.component';
     CitaEditarComponent,
     MensajeConfiguracionComponent,
     CitaPedirComponent,
+	VistaPersonalComponent,
+	ContenedorCitasPersonalComponent,
+	CitaEditarPersonalComponent,
   ],
   imports: [
     BrowserModule,

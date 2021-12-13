@@ -15,7 +15,7 @@ public class ViewController {
 
 	@RequestMapping(path={ "/home", "/crearCS", "/cnfgCupos", "/crearUsuarios", "/indicarDosisVacunas", "/usuariosSistema",
 			"/solicitarCita", "/editarUsuario/:idUsuario", "/editarCS/:idCentroSalud", "/listarPacientes", "/login",
-			"/misCitas" }, method = {RequestMethod.GET})
+			"/misCitas", "/listarPacientesPorCentro" }, method = {RequestMethod.GET})
 	public String index() {
 		return "forward:/index.html";
 	}

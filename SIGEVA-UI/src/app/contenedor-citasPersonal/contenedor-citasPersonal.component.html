@@ -1,0 +1,13 @@
+<app-barra-navegacion></app-barra-navegacion>
+
+<div class="separation"></div>
+<div class="separation"></div>
+<div class="separation"></div>
+<div class="seccion contenedor">
+  <div *ngIf="citas.length == 0">
+    <h1>{{msgNoCitas}}</h1>
+  </div>
+  <div class="contenedor-citas">
+    <app-cita-editarPersonal *ngFor="let cita of citas" [cita]="cita"></app-cita-editarPersonal>
+  </div>
+</div>

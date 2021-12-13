@@ -1,0 +1,33 @@
+.usuario {
+  width: 320px;
+}
+
+.btn {
+  max-width: 150px;
+  margin: 10px;
+}
+
+.btn-select {
+  max-width: 150px;
+  margin: 10px;
+}
+
+.alineacion-izquierda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+}
+
+mat-icon {
+  margin-right: 5px;
+}
+
+strong {
+  font-size: 18px;
+}

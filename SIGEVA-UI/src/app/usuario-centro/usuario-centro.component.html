@@ -1,0 +1,34 @@
+<div class="item usuario" *ngIf="!usuarioEliminado">
+  <div class="contenido-item centrar-texto">
+
+    <div class="control-group">
+      <img alt="imagen usuario" width="100" height="100" src={{usuario.imagen}}>
+      <div class="alineacion-izquierda">
+        <mat-icon>person</mat-icon>
+        <strong>{{usuario.nombre}} {{usuario.apellidos}}</strong>
+      </div>
+
+      <div class="alineacion-izquierda">
+        <mat-icon>assignment</mat-icon>
+        <p>{{usuario.dni}}</p>
+      </div>
+
+      <div class="alineacion-izquierda">
+        <mat-icon>verified_user</mat-icon>
+        <p>{{usuario.rol.nombre}}</p>
+      </div>
+
+      <div class="alineacion-izquierda">
+        <mat-icon>local_hospital</mat-icon>
+        <p>{{usuario.centroSalud.nombreCentro}}</p>
+      </div>
+
+      <div class="alineacion-botones">
+        <button class="btn-select" routerLink="/vistaPersonal" (click)="cogerId()">Solicitar</button>
+        <button class="btn-modificarCitaPersonal" routerLink="/modificarCitas" (click)="cogerId()" >Modificar</button>
+      </div>
+    </div>
+    <p class="resaltadoNegativo" *ngIf="errorMessage">{{errorMessage}}</p>
+    <p class="resaltadoPositivo" *ngIf="message">{{message}}</p>
+  </div>
+</div>
