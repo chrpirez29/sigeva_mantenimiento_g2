@@ -17,8 +17,8 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
- 	 <sonar.organization>equipo003</sonar.organization>
- 	 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.organization>chrpirez29</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 </project>
