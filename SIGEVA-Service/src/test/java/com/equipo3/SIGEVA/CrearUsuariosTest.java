@@ -85,20 +85,7 @@ class CrearUsuariosTest {
 		pacienteDTO.setImagen("912imagen");
 	}
 
-	@Test
-	void insercionCorrectaAdministrador() {
-		administradorDTO.setRol(utilidades.getRolByNombre("Administrador"));
-		centroSaludDTO.setNombreCentro(UUID.randomUUID().toString());
-		centroController.crearCentroSalud(centroSaludDTO);
-		administradorDTO.setCentroSalud((centroSaludDTO));
-
-		usuarioController.crearUsuarioAdministrador(administradorDTO);
-
-		assertEquals(usuarioController.getUsuarioById(administradorDTO.getIdUsuario()).toString(), administradorDTO.toString());
-		utilidades.eliminarUsuario(administradorDTO.getUsername());
-		utilidades.eliminarCentro(administradorDTO.getCentroSalud().getId());
-	}
-
+	
 	@Test
 	void insercionAdministradorDuplicado() {
 		try{
