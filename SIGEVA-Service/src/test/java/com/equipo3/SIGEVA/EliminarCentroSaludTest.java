@@ -82,12 +82,6 @@ class EliminarCentroSaludTest {
 		pacienteDTO.setCentroSalud(centroSaludDTO);
 		pacienteDTO.setRol(utilidades.getRolByNombre("Paciente"));
 		
-		administradorDTO = new AdministradorDTO();
-		administradorDTO.setUsername(UUID.randomUUID().toString());
-		administradorDTO.setCentroSalud(centroSaludDTO);
-		administradorDTO.setRol(utilidades.getRolByNombre("Administrador"));
-		
-		usuarioController.crearUsuarioAdministrador(administradorDTO);
 		usuarioController.crearUsuarioPaciente(pacienteDTO);
 		usuarioController.crearUsuarioSanitario(sanitarioDTO);
 		try {
@@ -96,7 +90,6 @@ class EliminarCentroSaludTest {
 			assertNotNull(e);
 			utilidades.eliminarUsuario(sanitarioDTO.getUsername());
 			utilidades.eliminarUsuario(pacienteDTO.getUsername());
-			utilidades.eliminarUsuario(administradorDTO.getUsername());
 			utilidades.eliminarCentro(centroSaludDTO.getId());
 		}
 	}
